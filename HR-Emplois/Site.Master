@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HR_Emplois.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: xx-large;
+            cursor: default;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .auto-style2 {
+            width: 120px;
+            height: 120px;
+        }
+        .label {
+            cursor: default;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .link {
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('marquee').mouseover(function () {
+                $(this).attr('scrollamount', 0);
+            }).mouseout(function () {
+                $(this).attr('scrollamount', 5);
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 100%;">
+            <tr>
+                <td colspan="2">
+                    <div style="background-color:#141414"><br /></div>
+                    <div style="background-color:#141414; text-align:center">
+                        <img runat="server" style="vertical-align:middle" src="~/Images/ofppt.png" class="auto-style2" draggable="false" />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lblOFPPT" runat="server" Font-Bold="True" Font-Names="Bahnschrift Condensed" Font-Size="XX-Large" ForeColor="White" ToolTip="ISTA" CssClass="auto-style1" Enabled="False">INSTITUT SPECIALISE DE TECHNOLOGIE APPLIQUEE</asp:Label>
+                    </div>
+                    <div style="background-color:#141414"><br /></div>
+                    <div id="annonceback" runat="server" style="background-color:#313131; text-align:center; padding:10px">
+                    <marquee behavior ="scroll" direction ="Left">
+                        <asp:Label ID="lblAnnonce" runat="server" CssClass="label" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." Font-Names="Century Gothic" ForeColor="White"></asp:Label></marquee>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="background-color:#313131; text-align:center; padding:10px">
+                        <asp:Label CssClass="label" runat="server" ID="lblCopyright" Text="OFPPT © 2021 ALL RIGHTS RESERVED   |   " Font-Names="Century Gothic" ForeColor="White" Font-Size="Small"/>
+                        <asp:HyperLink CssClass="link" ID="hypLogin" runat="server" Font-Names="Century Gothic" Font-Size="10pt" Font-Underline="False" ForeColor="White" NavigateUrl="~/CXR5eg8B.aspx">Vous êtes administrateur?</asp:HyperLink>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

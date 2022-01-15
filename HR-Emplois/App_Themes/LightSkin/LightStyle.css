@@ -1,0 +1,22 @@
+﻿.button{
+    border-radius: 5px;
+    border: 2px solid white;
+    height: 30px;
+    border-radius: 0px;
+    background-color: transparent;
+    color:white;
+    font: 16px Century Gothic;
+    margin-top:7px;
+    margin-right:10px;
+}
+.button:hover{
+    background-color:whitesmoke;
+    color:#3F3F3F;
+}
+.dropdownlist{
+    width: 80% !important;
+}
+.ddl-home {
+    font-family: 'Century Gothic';
+    border-radius: 0px;
+}

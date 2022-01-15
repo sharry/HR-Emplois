@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.master.cs" Inherits="HR_Emplois.Dashboard" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .label {
+            cursor: default;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 100%; border-collapse:collapse">
+            <tr>
+                <td colspan="3">
+                    <div style="background-color:#141414"><br /></div>
+                    <div style="background-color:#141414; text-align:center">
+                        <img runat="server" style="vertical-align:middle" src="~/Images/ofppt.png" class="auto-style2" draggable="false" />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="lblOFPPT" runat="server" Font-Bold="True" Font-Names="Bahnschrift Condensed" Font-Size="XX-Large" ForeColor="White" ToolTip="ISTA" CssClass="label" Enabled="False">INSTITUT SPECIALISE DE TECHNOLOGIE APPLIQUEE</asp:Label>
+                    </div>
+                    <div style="background-color:#141414"><br /></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div style="background-color:#313131; text-align:center; padding:10px">
+                        <asp:Label runat="server" ID="lblCopyright" Text="OFPPT © 2021 ALL RIGHTS RESERVED" Font-Names="Century Gothic" ForeColor="White" Font-Size="Small" CssClass="label"/>
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
